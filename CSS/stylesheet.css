@@ -1,0 +1,807 @@
+/*-- Main ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+    margin: 0px;
+    background: #F0F8FF;
+    color: black;
+	width:100%;
+	margin: auto;
+	min-width:600px;
+	max-width:2000px;
+}
+nav h1 {
+    color: white;
+    text-align: left;
+}
+h1.phone-text,
+span.text {
+    color: #00008B;
+}
+h2 {
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: #00008B;
+}
+h3 {
+    color: #00008B;
+}
+i {
+    color: red;
+    font-size: 20px;
+}
+.content {
+    width: 98%;
+    background: #F0F8FF;
+    height: 1100px;
+    margin: 8% 0% 0% 0%;
+}
+footer {
+    background: gray;
+    position: absolute;
+    width: 100%;
+    height: 5%;
+    text-align: center;
+}
+/*-- Header ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+nav h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 22px;
+    text-transform: uppercase;
+    margin-left: 1%;
+}
+nav {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    background: #00008B;
+    margin: 0px auto;
+    text-align: left;
+    z-index: 1;
+}
+.login {
+    position: fixed;
+    top: 1.5%;
+    left: 80%;
+    color: white;
+}
+form a {
+    background-color: #E0E0E0;
+    color: black;
+    padding: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+#hideLogin {
+    visibility: visible;
+}
+#show {
+    visibility: hidden;
+}
+/*-- Navigaton Bar ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#primary_nav_wrap {
+    position: fixed;
+    margin-top: 10px;
+    top: 0%;
+    left: 35%;
+    width: 50%;
+    height: 30px;
+    padding: 10px 10px 0px 0px;
+    text-align: right;
+    background: transparent;
+}
+#primary_nav_wrap ul {
+    position: relative;
+    margin: 0;
+    list-style: none;
+    line-height: normal;
+    display: inline;
+    float: left;
+    display: block;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 15px;
+    font-family: 'Oswald', sans-serif;
+}
+#primary_nav_wrap ul li {
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#primary_nav_wrap a {
+    display: block;
+    margin-left: 1px;
+    padding: 0px 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 32px;
+    display: block;
+    font-weight: 700;
+}
+#primary_nav_wrap a:hover,
+#menu .current_page_item a {
+    text-decoration: none;
+    background: #2A95FF;
+    border-radius: 5px;
+    color: #FFFFFF;
+}
+#primary_nav_wrap ul li.current-menu-item {
+    background: #2A95FF;
+}
+#primary_nav_wrap ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    padding: 0;
+}
+#primary_nav_wrap ul ul li {
+    float: none;
+    width: 100%;
+}
+#primary_nav_wrap ul ul a {
+    line-height: 120%;
+    padding: 10px 15px;
+}
+#primary_nav_wrap ul ul ul {
+    top: 0;
+    left: 100%;
+}
+#primary_nav_wrap ul li:hover > ul {
+    display: block;
+    background: #1a0000;
+}
+/*-- Tabs ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.phone {
+    width: 30%;
+    border: 1px solid white;
+    background-color: #00008B;
+    color: black;
+    font-weight: bold;
+    float: left;
+    text-align: center;
+    margin: 1.5%;
+    border-radius: 60%;
+}
+.phone:hover {
+    background: linear-gradient(#ffffff, black);
+    color: #00008B;
+}
+.tab-list {
+    margin: 0;
+    padding: 0;
+}
+.tab-list li {
+    display: inline-block;
+    list-style: none;
+    margin: 1.5%;
+    border-radius: 60%;
+    width: 30%;
+    text-align: center;
+    background-color: #303030;
+    border-bottom: 3px solid #858585;
+    font-family: 'Jacques Francois', serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.tab-list li a {
+    color: #f2f2f2;
+    display: block;
+    border-radius: 60%;
+    text-decoration: none;
+    padding: 3px 10px 3px 10px;
+}
+.tab-list li.active,
+.tab-list li:hover {
+    background: linear-gradient(#ffffff, black);
+    color: #00008B;
+}
+.tab-list li.active a,
+.tab-list li a:hover {
+    background: linear-gradient(#ffffff, black);
+    color: #00008B;
+}
+.tab-panel {
+    display: none;
+    background: linear-gradient(#ffffff, black);
+    color: #00008B;
+    min-height: 150px;
+    overflow: auto;
+}
+.tab-panel.active {
+    display: block;
+}
+.tab-panel p {
+    margin: 20px;
+}
+.tab-panel section {
+    width: 22%;
+    float: left;
+    margin: 1%;
+}
+.tab-panel section p {
+    float: left;
+    width: 50%;
+    color: white;
+}
+.tab-panel section img {
+    float: left;
+}
+.tab-panel section h4 {
+    margin: 1% 2% 1% 2%;
+}
+.tabs h3 {
+    color: white;
+}
+/*-- News ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.background {
+    background: url(../Images/business.jpg);
+    border: 2px solid black;
+    width: 45%;
+    height: 200px;
+    float: left;
+    margin: 2%
+}
+.background2 {
+    background: url(../Images/vr.jpg);
+    border: 2px solid black;
+    width: 45%;
+    height: 200px;
+    float: left;
+    margin: 2%
+}
+.transbox {
+    margin: 0px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.transbox p {
+    margin: 5%;
+    font-weight: bold;
+    color: black;
+}
+.transbox:hover {
+    background: linear-gradient(#ffffff, black);
+}
+/*-- Slider ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.slider {
+    position: relative;
+    margin: 0% 0% 5% 0%;
+    width: 900px;
+    height: 300px;
+    min-width: 300px;
+    max-width: 1500px;
+    top: 5%;
+    left: 18%;
+}
+.slider img {
+    width: 100%;
+    display: none;
+}
+img.showImage {
+    display: inline-block;
+}
+img.hideImage {
+    display: none;
+}
+button:focus {
+    outline: 0;
+}
+button.next,
+button.prev {
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    background-color: #212121;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 20px;
+}
+.slider button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.next {
+    right: 0;
+    opacity: 0.4;
+}
+.prev {
+    left: 0;
+    opacity: 0.4;
+}
+figure {
+    display: block;
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 0 0 0 0;
+}
+figure img {
+    width: 900px;
+    height: 300px;
+}
+figcaption {
+    position: absolute;
+    background: black;
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 20px;
+    opacity: 0;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+}
+figure:hover figcaption {
+    opacity: 1;
+}
+figure:before {
+    content: "?";
+    position: absolute;
+    font-weight: 800;
+    background: #00008B;
+    text-shadow: 0 0 5px white;
+    color: white;
+    width: 98%;
+    height: 24px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    -moz-transition: all 0.6s ease;
+    opacity: 0.75;
+}
+figure:hover:before {
+    opacity: 0;
+}
+.cap-bot:before {
+    bottom: 10px;
+    left: 10px;
+}
+.cap-bot figcaption {
+    left: 0;
+    bottom: 10px;
+}
+.cap-bot:hover figcaption {
+    bottom: 1.4%;
+    width: 85%;
+    left: 5.3%;
+    right: 5%;
+}
+/*-- Sumbit a Question ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="date"],
+#contact textarea,
+#contact button[type="submit"] {
+    font: 400 10px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#contact,
+.asked {
+    border-radius: 5px;
+    background: linear-gradient(#ffffff, gray);
+    padding: 30px;
+    width: 80%;
+    height: auto;
+    margin-left: 8%;
+    margin-right: 12%;
+}
+.asked,
+#contact h3 {
+    text-align: center;
+}
+#contactWrap {
+    margin-left: 100px;
+}
+#contact h3,
+.asked h3 {
+    color: #00008B;
+    display: block;
+    font-size: 28px;
+}
+#contact h4 {
+    margin: 5px 0 15px;
+    display: block;
+    font-size: 14px;
+}
+#contact label {
+    display: inline block;
+    width: 20%;
+    padding: 10px 20px;
+    color: #00008B;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 0 0 1px silver;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    border: 1px solid #CCC;
+    background: #FFF;
+    padding: 10px;
+    border-radius: 5px;
+    width: 50%;
+}
+#contact textarea {
+    height: 100px;
+    max-width: 100%;
+}
+#contact input[type="submit"] {
+    width: 30%;
+    border: none;
+    background: #00008B;
+    color: white;
+    font-size: 18px;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+#contact input:focus,
+#contact textarea:focus {
+    outline: 0;
+    border: 1px solid #999;
+}
+/*-- Frequently Asked ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.asked section h4,
+.asked section p {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 5px;
+}
+.asked section {
+    background: #F0F8FF;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px
+}
+.asked section h4 i {
+    color: gray;
+}
+.asked section p i {
+    color: #00008B;
+}
+.asked h2 {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+/*-- Create New Account/Login/Update ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+input[name="name"],
+input[name="username"],
+input[name="surname"],
+input[name="pwd"],
+input[name="email"],
+input[name="phone"],
+input[name="country"],
+input[name="address"] {
+    display: block;
+    width: 360px;
+    margin-left: 0px;
+    padding: 10px 5px;
+    border: 1px solid silver;
+    outline: 5px solid #ebebeb;
+    font-size: 22px;
+}
+.panel {
+    margin-left: 27%;
+    width: 45%;
+    margin-top: 0px;
+    padding: 15px 0 0;
+    background: #fff;
+    border: 1px solid silver;
+    font: 16px calibri;
+    letter-spacing: -1px;
+    -webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
+}
+label {
+    display: block;
+    width: 260px;
+    padding: 10px 20px;
+    color: #00008B;
+    font-size: 16px;
+    text-shadow: 0 0 1px silver;
+}
+.panel #username,
+.panel #password,
+.panel input[name="code"] {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+    padding: 10px 5px;
+    border: 1px solid silver;
+    outline: 5px solid #ebebeb;
+    font-size: 22px;
+}
+.panel #username:focus,
+.panel #password:focus {
+    outline: 5px solid #e5f2f8;
+}
+.lower input[type="button"] {
+    border: solid 2px #c7c7c7;
+    border-radius: 5px 5px 20px 20px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 2px 10px;
+    background: #00008B;
+    margin-left: 220px;
+    margin-top: 20px;
+}
+input[name="Submit"] {
+    border: solid 2px #c7c7c7;
+    border-radius: 5px 5px 20px 20px;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 2px 10px;
+    background: #00008B;
+}
+#submit,
+#new {
+    border: solid 2px #c7c7c7;
+    border-radius: 5px 5px 20px 20px;
+    border-color: #00008B;
+    font-size: 16px;
+    color: white;
+    padding: 2px 10px;
+    background: #00b7ff;
+}
+#panel2 {
+    margin-left: 20%;
+    width: 60%;
+    margin-top: 50px;
+    padding: 15px 0 0;
+    background: #fff;
+    border: 1px solid silver;
+    font: 16px calibri;
+    letter-spacing: -1px;
+    -webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
+}
+#panel3 {
+    margin-left: 20%;
+    width: 60%;
+    margin-top: 10%;
+    padding: 15px 0 0;
+    background: #fff;
+    border: 1px solid silver;
+    font: 16px calibri;
+    letter-spacing: -1px;
+    -webkit-box-shadow: 0 0 2px silver;
+    -moz-box-shadow: 0 0 2px silver;
+    box-shadow: 0 0 2px silver;
+}
+#showAccount {
+    visibility: hidden;
+}
+.panel p {
+    margin-left: 2%;
+    font-size: 20px;
+}
+#showUpdateAccount {
+    visibility: hidden;
+    position: relative;
+    top: -105%;
+}
+#showAccount .panel h3 {
+    display: inline;
+}
+#showAccount .panel input {
+    margin-left: 15px;
+}
+input[type="text"], input[type="number"], input[type="password"],input[type="email"]{
+	color: silver;
+}
+/*-- Order ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700);
+.wrap {
+    width: 46.5%;
+    margin: auto;
+    text-align: left;
+    color: #989A8F;
+}
+.table {
+    background-color: #ffffff;
+    height: 500px;
+    width: 100%;
+    margin-top: 10%;
+}
+#order ul li {
+    float: left;
+    width: 33%;
+    text-align: center;
+    list-style-type: none;
+    border-left: 1px solid #DDDCD8;
+}
+.top {
+    background-color: #EAE9E4;
+    height: 75px;
+	width: 100%;
+}
+h1 {
+    padding-top: 20px;
+}
+.bottom {
+    margin-top: 50px;
+	width: 100%;
+}
+.sign {
+    margin-top: 20px;
+}
+label > input {
+    /* HIDE RADIO */
+    
+    display: none;
+}
+label > input + img {
+    /* IMAGE STYLES */
+    
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+label > input:checked + img {
+    /* (CHECKED) IMAGE STYLES */
+    
+    border: 2px solid #f00;
+}
+.panel label {
+    display: inline;
+    width: auto;
+    padding: 0px;
+    color: #00008B;
+    font-size: 16px;
+    text-shadow: 0 0 1px silver;
+    margin: 5px;
+}
+h1 {
+    color: #00008B;
+    text-align: center;
+}
+.choices {
+    margin: 5px;
+    width: 45%;
+    float: left
+}
+.choices h2 {
+    text-align: left;
+}
+#table {
+    margin-left: 30%;
+    margin-top: 5%;
+	margin-right: 30%;
+}
+#table h2 {
+    text-align: center;
+}
+table {
+    color: #333;
+    font-family: Helvetica, Arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,
+th {
+    border: 0 none;
+    height: 30px;
+}
+th {
+    background: linear-gradient(#333 0%, #444 100%);
+    color: #FFF;
+    font-weight: bold;
+    height: 40px;
+    text-align: center;
+}
+td {
+    background: #FAFAFA;
+    text-align: center;
+}
+thead tr td {
+    background: #00008B;
+    font-weight: bold;
+    color: white;
+}
+tfoot {
+    color: black;
+    font-weight: bold;
+}
+tfoot tr td {
+    position: relative;
+    left: 45%;
+}
+#code {
+    margin: 10px;
+    margin-left: 19%;
+    text-align: center;
+    display: block;
+    width: 360px;
+    border: 1px solid silver;
+    outline: 5px solid #ebebeb;
+    font-size: 22px;
+    color: red;
+}
+#pricing {
+    margin-left: 20%;
+}
+.tableDesign {
+    padding: 5px;
+    border-spacing: 1px;
+    border-collapse: separate;
+    border: 1px;
+}
+#card_total {
+    float: right;
+}
+.sign input[type="number"]{
+	width: 50px;
+}
+.center {
+	margin-left: 45%;
+}
+span input[type="number"] {
+	color: #00008B;
+	text-align: center;
+}
+/*-- Promotion ---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.space {
+	margin-left: 2%;
+	width: 45%;
+	float: left;
+}
+.space .panel {
+	margin-left: 50px;
+	margin-top: 5%;
+	width: 100%;
+	height: 350px;
+}
+.space .panel h2 {
+	margin-top: 10%;
+}
+.space .panel img {
+	margin: 0 12% 0 12%;
+}
+.space .panel h3 {
+	text-align: center;
+}
+
+
+
+
+

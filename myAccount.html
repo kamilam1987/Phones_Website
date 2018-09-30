@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My Account</title>
+	<link rel="shortcut icon" href="Images/tronic.ico" type="image/x-icon" />
+	<link href="CSS/stylesheet.css" rel="stylesheet">
+	<link href="CSS/mistake2.css" rel="stylesheet">
+	<script src="JavaScript&jQuerry/jquery-1.11.0.min.js"></script>
+	<script src="JavaScript&jQuerry/javascript.js" type="text/javascript"></script>
+</head>
+
+<body>
+<!-- Header & Nav Bar ======================================================================================================================================================================== -->
+	<div class="content">
+		<nav>
+			<h1>&nbsp;&nbsp;&nbsp;MKC <br>Tronic</h1>
+			<div id="header-wrapper">
+				<div id="header">
+					<nav id="primary_nav_wrap">
+						<ul>
+							<li><a href="index.html">Home</a>
+							</li>
+							<li class="current-menu-item"><a href="myAccount.html">My Account</a>
+							</li>
+							<li><a href="order.html">Order</a>
+							</li>
+							<li><a>Info</a>
+								<ul>
+									<li><a href="promotion.html">Promotion</a>
+									</li>
+									<li><a href="contact.html">Contact</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+
+		</nav>
+
+<!-- Login======================================================================================================================================================================== -->
+		<div id="showAccount">
+			<div class="panel">
+				<input name="Submit" type="button" value="Show Account Details" onClick="myAccount()">
+				<p id="myAccount"></p>
+			</div>
+		</div>
+
+		<div id="hideLogin">
+			<div class="panel">
+				<h2>Login Into Your Account</h2>
+				<form>
+					<label>Username:</label>
+					<input type="text" id="username" name="username" placeholder="Username">
+
+					<label>Password:</label>
+					<input type="password" id="password" name="password" placeholder="Password">
+					<div class="lower">
+						<input type="button" value="Login" onClick="validateLoginInfo()">
+					</div>
+				</form>
+
+			</div>
+		</div>
+
+<!-- Create New Account======================================================================================================================================================================== -->
+		<div id="hideCreateNew">
+			<div id="panel2">
+				<h2>Create New Account</h2>
+				<form name="demo" onsubmit="return validateOnSubmit(this)">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<label>Your username:</label>
+								</td>
+								<td>
+									<input id="newUsername" name="username" value="NewUsername" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="usernameV"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your Name:</label>
+								</td>
+								<td>
+									<input id="newName" name="name" value="NewName" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="name"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your Surname:</label>
+								</td>
+								<td>
+									<input id="newSurname" name="surname" value="NewSurname" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="surname"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your password</label>
+								</td>
+								<td>
+									<input id="newPassword" name="pwd" value="NewPassword" size="35" maxlength="25" type="password">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="pwd"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your email:</label>
+								</td>
+								<td>
+									<input id="newEmail" name="email" value="NewEmail@gmit.ie" size="35" maxlength="30" type="email">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="email"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your telephone number:</label>
+								</td>
+								<td>
+									<input id="newPhone" name="phone" value="1234567890" size="35" maxlength="25" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="phone"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Country:</label>
+								</td>
+								<td>
+									<input id="newCountry" name="country" value="NewCountry" size="35" maxlength="30" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="country"></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Address:</label>
+								</td>
+								<td>
+									<input id="newAddress" name="address" value="NewAddress" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>
+									<p id="address"></p>
+								</td>
+							</tr>
+
+							<tr>
+								<td>&nbsp;</td>
+								<td>
+									<input name="Submit" value="Create account" type="submit">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+
+<!-- Update Your Account Information======================================================================================================================================================================== -->
+		<div id="showUpdateAccount">
+			<div id="panel3">
+				<h2>Update Your Account</h2>
+				<form>
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<label>Your username:</label>
+								</td>
+								<td>
+									<input id="updateUsername" name="username" value="UpdateUsername" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your Name:</label>
+								</td>
+								<td>
+									<input id="updateName" name="name" value="UpdateName" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your Surname:</label>
+								</td>
+								<td>
+									<input id="updateSurname" name="surname" value="UpdateSurname" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your password</label>
+								</td>
+								<td>
+									<input id="updatePassword" name="pwd" value="UpdatePassword" size="35" maxlength="25" type="password">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your email:</label>
+								</td>
+								<td>
+									<input id="updateEmail" name="email" value="UpdateEmail@gmit.ie" size="35" maxlength="30" type="email">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Your telephone number:</label>
+								</td>
+								<td>
+									<input id="updatePhone" name="phone" value="1234567890" size="35" maxlength="25" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Country:</label>
+								</td>
+								<td>
+									<input id="updateCountry" name="country" value="UpdateCountry" size="35" maxlength="30" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Address:</label>
+								</td>
+								<td>
+									<input id="updateAddress" name="address" value="UpdateAddress" size="35" maxlength="50" type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+								<td>
+									<input name="Submit" value="Update" type="button" onclick="updateAccount()">
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+<!-- Footer======================================================================================================================================================================== -->
+
+</body>
+
+</html>
